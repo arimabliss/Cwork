@@ -49,4 +49,5 @@ document.addEventListener('DOMContentLoaded', function() {
             createSnowflake();
         }, (animationDuration + animationDelay) * 1000);
     }
+
 });

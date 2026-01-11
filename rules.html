@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="icon" href="images/logo.png">
+  <meta name="description" content="Free, modern and nice web template for Minecraft server.">
+  <meta name="author" content="Astronawta">
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/pages/rules.css">
+  <link rel="stylesheet" href="css/animation.css">
+
+  <title>Royal-Network | Rules</title>
+</head>
+<body>
+  <!-- Snow Container -->
+  
+  <!--Navbar-->
+  <div class="navbar">
+    <!-- ... existing code ... -->
+    <div class="menu-mobile">
+      <a href="index.html">
+        <div class="logo">
+          <img src="images/logo.png" alt="Server logo" class="logo-img">
+          <h3 class="server-name">Royal-Network</h3>
+        </div>
+      </a>
+      <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="links">
+      <a href="index.html" class="link">Home</a>
+      <a href="#" class="link active">Rules</a>
+      <a href="admin-team.html" class="link">Admin-Team</a>
+      <a href="contact.html" class="link">Contact</a>
+    </div>
+  </div>
+
+  <!--Header-->
+  <section id="header">
+    <div class="content">
+      <div class="info fade-in">
+        <p class="minecraft-server-ip">Royal.mc-crafters.com</p>
+        <h1 class="title">Follow the <span>rules</span></h1>
+      </div>
+      <p class="description fade-in delay-300">
+        List of all Minecraft and Discord server rules.
+      </p>
+    </div>
+  </section>
+
+  <!--Rules-->
+  <section id="rules">
+    <div class="content">
+      <div class="warning pulse">
+        <p>Ignorance of the rules is no excuse!</p>
+        <div class="icon glow">
+          <i class="fa-solid fa-exclamation"></i>
+        </div>
+      </div>
+
+      <div class="minecraft-rules rules fade-in">
+        <h2 class="minecraft-rules-title rules-title">Minecraft server</h2>
+        <ol class="rules-list">
+          <li class="rule slide-in-left delay-100">Follow Minecraft's official rules – no hacked clients, cheats, or unfair advantages.</li>
+          <li class="rule slide-in-left delay-200">Be respectful to all players and staff. No hate speech, bullying, or toxic behavior.</li>
+          <li class="rule slide-in-left delay-300">No griefing or stealing unless allowed in the specific gamemode (e.g., Lifesteal).</li>
+          <li class="rule slide-in-left delay-400">Do not spam, advertise, or post inappropriate content in chat or signs.</li>
+          <li class="rule slide-in-left delay-500">Use only allowed mods (e.g., OptiFine). Any unfair mod will result in a ban.</li>
+          <li class="rule slide-in-left delay-600">Do not exploit bugs or glitches – report them to staff immediately.</li>
+          <li class="rule slide-in-left delay-700">Impersonating staff or other players is strictly forbidden.</li>
+          <li class="rule slide-in-left delay-800">Follow staff instructions at all times – their word is final in all disputes.</li>
+        </ol>
+      </div>
+
+      <div class="discord-rules rules fade-in delay-500">
+        <h2 class="discord-rules-title rules-title">Discord server</h2>
+        <ol class="rules-list">
+          <li class="rule slide-in-right delay-100">Be respectful to everyone – no hate speech, racism, sexism, or toxic behavior.</li>
+          <li class="rule slide-in-right delay-200">No spamming, flooding, or excessive tagging in any channel.</li>
+          <li class="rule slide-in-right delay-300">Keep conversations in the correct channels – read channel descriptions first.</li>
+          <li class="rule slide-in-right delay-400">No advertising, self-promotion, or sharing invite links without permission.</li>
+          <li class="rule slide-in-right delay-500">Do not impersonate staff or other members.</li>
+          <li class="rule slide-in-right delay-600">Use appropriate usernames and profile pictures – no offensive content.</li>
+          <li class="rule slide-in-right delay-700">Do not ping staff unnecessarily – use support channels when needed.</li>
+          <li class="rule slide-in-right delay-800">Follow Discord's Terms of Service and Community Guidelines at all times.</li>
+        </ol>
+      </div>
+  </section>
+
+  <!--Server Join-->
+  <section id="join-server">
+    <div class="content fade-in">
+      <h2 class="section-title">If you have read the <span>rules</span>, you can go and <span>enjoy the fun</span> on our server!</h2>
+      <div class="buttons pulse">
+        <button class="copy-ip glow">Copy IP</button>
+        <a href="https://discord.gg/sn5PAuuzsS" class="discord-link"><button class="join-discord">Join Discord</button></a>
+      </div>
+      <p class="ip-copied">IP was successfully copied!</p>
+    </div>
+  </section>
+
+  <!--Footer-->
+  <footer id="footer">
+    <p class="copyright">&copy; 2025 <span class="server-name-footer">Royal-Network</span>. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#" class="link tiktok-link"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#" class="link instagram-link"><i class="fa-brands fa-square-instagram"></i></a>
+      <a href="#" class="link discord-link-footer"><i class="fa-brands fa-discord"></i></a>
+    <!-- Add this somewhere in your navbar or footer -->
+
+    </div>
+
+<!-- Add this somewhere in your navbar or footer -->
+  </footer>
+  
+  <!-- Snow Animation Script -->
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const snowContainer = document.getElementById('snowContainer');
+    const toggleSnowButton = document.getElementById('toggle-snow'); // Updated to match your button ID
+    const snowflakeCount = 50;
+    let isSnowEnabled = true;
+    
+    // Create initial snowflakes
+    for (let i = 0; i < snowflakeCount; i++) {
+        createSnowflake();
+    }
+    
+    function createSnowflake() {
+        if (!isSnowEnabled) return;
+        
+        const snowflake = document.createElement('div');
+        const type = Math.floor(Math.random() * 3) + 1;
+        
+        snowflake.classList.add('snowflake', `type-${type}`);
+        snowflake.style.left = `${Math.random() * 100}%`;
+        
+        const duration = 5 + Math.random() * 10;
+        const delay = Math.random() * 5;
+        
+        snowflake.style.animationDuration = `${duration}s`;
+        snowflake.style.animationDelay = `${delay}s`;
+        
+        snowContainer.appendChild(snowflake);
+        
+        setTimeout(() => {
+            snowflake.remove();
+            if (isSnowEnabled) {
+                createSnowflake();
+            }
+        }, (duration + delay) * 1000);
+    }
+    
+    // Toggle snow function
+    toggleSnowButton.addEventListener('click', function() {
+        isSnowEnabled = !isSnowEnabled;
+        
+        if (!isSnowEnabled) {
+            // Stop snow
+            toggleSnowButton.style.background = 'rgba(231, 76, 60, 0.5)'; // Red tint when off
+            toggleSnowButton.textContent = 'Snow: OFF';
+            snowContainer.querySelectorAll('.snowflake').forEach(flake => {
+                flake.classList.add('paused');
+            });
+        } else {
+            // Start snow
+            toggleSnowButton.style.background = 'rgba(0, 0, 0, 0.5)'; // Original color
+            toggleSnowButton.textContent = 'Snow: ON';
+            snowContainer.querySelectorAll('.snowflake').forEach(flake => {
+                flake.classList.remove('paused');
+            });
+            
+            // Create new snowflakes if there aren't enough
+            const currentFlakes = snowContainer.querySelectorAll('.snowflake').length;
+            for (let i = currentFlakes; i < snowflakeCount; i++) {
+                createSnowflake();
+            }
+        }
+    });
+});
+  </script>
+</body>
+<script src="js/script.js"></script>
+<script src="https://kit.fontawesome.com/cbf5ee59c8.js" crossorigin="anonymous"></script>
+</html>
